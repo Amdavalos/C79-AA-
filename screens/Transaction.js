@@ -87,7 +87,7 @@ export default class TransactionScreen extends Component {
           var { bookName, studentName } = this.state;
           this.initiateBookReturn(bookId, studentId, bookName, studentName);
 
-          // Solo para usuario s de Android 
+          // Solo para usuarios de Android 
        /*   ToastAndroid.show(
             "Libro devuelto a la biblioteca",
             ToastAndroid.SHORT
@@ -142,7 +142,7 @@ export default class TransactionScreen extends Component {
       .update({
         is_book_available: false
       });
-    //cambia el número de libros enviados al alumno
+    //cambia el número de libros emitidos al alumno
     db.collection("students")
       .doc(studentId)
       .update({
@@ -172,7 +172,7 @@ export default class TransactionScreen extends Component {
       .update({
         is_book_available: true
       });
-    //cambia el número de libros enviados al alumno
+    //cambia el número de libros emitidos al alumno
     db.collection("students")
       .doc(studentId)
       .update({
